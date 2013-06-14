@@ -12,22 +12,16 @@ var calcium = {
 
 var app = new calcium.web.App();
 
-// push storage devices...
-
-app.storage.push("static", new calcium.storage.local.Device({basepath:__dirname + '/static'}));
-
 // push routers...
 
 var router = new calcium.web.Router();
 
 router.get('/', function(context)
 {
-    context.storage.readstream('/static/index.html', function(readstream) {
+    context.response.writeHead(200, {'content-type' : 'text/html'});
         
-        context.response.writeHead(200, {'content-type' : 'text/html'});
-        
-        readstream.pipe(context.response);
-    });
+    context.response.end("end")
+    
 });
 
 router.post('/formpost', function(context) {

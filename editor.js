@@ -12,9 +12,8 @@ var calcium = {
     editor     : require('calcium.editor')
 };
 
-var device = new calcium.storage.local.Device({basepath:__dirname});
 
-var editor = new calcium.editor.App(device);
+var editor = new calcium.editor.App( __dirname );
 
 editor.listen(8888);
 
