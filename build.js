@@ -10,7 +10,7 @@ var project =
 
         {name:'calcium.storage',    references: ['calcium.logging'], build : false},
 
-        {name:'calcium.template',   references: ['calcium.storage'], build : true},
+        {name:'calcium.template',   references: ['calcium.storage'], build : false},
 
         {name:'calcium.web',        references: ['calcium.logging'], build : false},
 
