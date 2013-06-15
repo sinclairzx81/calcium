@@ -6,13 +6,13 @@ var project =
 
     modules  : [
 
-        {name:'calcium.logging',    references: [], build : true},
+        {name:'calcium.logging',    references: [], build : false},
 
-        {name:'calcium.storage',    references: ['calcium.logging'], build : true},
+        {name:'calcium.storage',    references: ['calcium.logging'], build : false},
 
         {name:'calcium.template',   references: ['calcium.storage'], build : true},
 
-        {name:'calcium.web',        references: ['calcium.logging'], build : true},
+        {name:'calcium.web',        references: ['calcium.logging'], build : false},
 
         {name:'calcium.editor',     references: ['calcium.web', 'calcium.logging',  'calcium.template', 'calcium.storage'], build : true}
     ]
