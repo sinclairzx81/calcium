@@ -16,12 +16,8 @@ var calcium = {
 
 var mount = new calcium.storage.mount.Storage();
 
-mount.push("development", new calcium.storage.local.Storage({ basepath: __dirname }) );
+mount.push("application", new calcium.storage.local.Storage({ basepath: __dirname }) );
 
-mount.push("staging",     new calcium.storage.local.Storage({ basepath: __dirname }) );
-
-mount.push("production",  new calcium.storage.local.Storage({ basepath: __dirname }) );
- 
 // create editor
 
 var editor = new calcium.editor.App( mount );
