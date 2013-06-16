@@ -18,6 +18,7 @@ var mount = new calcium.storage.mount.Storage();
 
 mount.push("application", new calcium.storage.local.Storage({ basepath: __dirname }) );
 
+
 // create editor
 
 var editor = new calcium.editor.App( mount );
