@@ -1,4 +1,4 @@
-﻿
+
 var calcium = {
 
     logging    : require('calcium.logging'),
